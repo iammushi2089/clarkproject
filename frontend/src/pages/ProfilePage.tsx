@@ -65,7 +65,7 @@ export const ProfilePage = () => {
     } catch (err) { console.error(err); }
   };
 
-  const picSrc = user?.profilePic ? `http://localhost:5000/uploads/${user.profilePic}` : `https://ui-avatars.com/api/?name=${user?.name || 'User'}&background=random&size=150`;
+  const picSrc = user?.profilePic ? `https://clarkproject.onrender.com/uploads/${user.profilePic}` : `https://ui-avatars.com/api/?name=${user?.name || 'User'}&background=random&size=150`;
   const cardStyle = { background: 'var(--bg-secondary)', padding: '2.5rem', borderRadius: '12px', border: '1px solid var(--border-color)', marginBottom: '2rem' };
   const inputStyle = { width: '100%', marginBottom: '1.5rem', padding: '0.8rem', background: 'var(--bg-tertiary)', color: 'white', border: '1px solid var(--border-color)', borderRadius: '6px' };
 

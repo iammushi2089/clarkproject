@@ -82,7 +82,7 @@ export const PostPage = () => {
   return (
     <section style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'left' }}>
       {post.image && (
-        <img src={`http://localhost:5000/uploads/${post.image}`} alt={post.title} style={{ width: '100%', borderRadius: '8px', marginBottom: '2rem' }} />
+        <img src={`https://clarkproject.onrender.com/uploads/${post.image}`} alt={post.title} style={{ width: '100%', borderRadius: '8px', marginBottom: '2rem' }} />
       )}
       <h1 className="title">{post.title}</h1>
       <div style={{ marginBottom: '2rem', color: 'var(--text-muted)' }}>

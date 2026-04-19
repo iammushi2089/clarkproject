@@ -98,7 +98,7 @@ export const Home = () => {
                 posts.map(post => (
                   <div key={post._id} style={{ ...cardStyle, flex: '0 1 350px', maxWidth: '350px', cursor: 'pointer', transition: 'transform 0.2s' }} onClick={() => navigate(`/posts/${post._id}`)}>
                     {post.image ? (
-                      <img src={`http://localhost:5000/uploads/${post.image}`} alt={post.title} style={{ width: '100%', height: '220px', objectFit: 'cover' }} />
+                      <img src={`https://clarkproject.onrender.com/uploads/${post.image}`} alt={post.title} style={{ width: '100%', height: '220px', objectFit: 'cover' }} />
                     ) : (
                       <div style={{ width: '100%', height: '220px', background: 'var(--bg-tertiary)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--text-muted)' }}>No Cover Image</div>
                     )}
@@ -110,7 +110,7 @@ export const Home = () => {
                       <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', borderTop: '1px solid var(--border-color)', paddingTop: '1rem' }}>
                         <div style={{ width: '30px', height: '30px', borderRadius: '50%', background: 'var(--accent-color)', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', color: '#fff', fontSize: '0.8rem', fontWeight: 'bold' }}>
                           {post.author.profilePic ? (
-                             <img src={`http://localhost:5000/uploads/${post.author.profilePic}`} alt={post.author.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                             <img src={`https://clarkproject.onrender.com/uploads/${post.author.profilePic}`} alt={post.author.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                           ) : (
                              post.author.name.charAt(0).toUpperCase()
                           )}
