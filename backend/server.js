@@ -16,9 +16,15 @@ const app = express();
 connectDB();
 
 // 2. Middleware (Updated CORS for Vite's port 5174)
-app.use(cors({ 
-  origin: ['http://localhost:3000', 'http://localhost:5174'], 
-  credentials: true 
+const cors = require('cors');
+
+// Update your existing cors setup to this:
+app.use(cors({
+    origin: [
+        'http://localhost:5174', // Keeps local testing working
+        'https://esports-analyst.vercel.app' // Your new live frontend!
+    ],
+    credentials: true
 }));
 app.use(express.json());
 
