@@ -2,7 +2,8 @@
 import axios from 'axios';
 
 const instance = axios.create({
-  baseURL: 'https://clarkproject.onrender.com',
+  // Added /api to the end of your live Render link
+  baseURL: 'https://clarkproject.onrender.com/api',
 });
 
 instance.interceptors.request.use((config) => {
