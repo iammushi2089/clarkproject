@@ -1,6 +1,6 @@
 require('dotenv').config();
 const express = require('express');
-const cors = require('cors');
+const cors = require('cors'); // Declared ONLY once here!
 const path = require('path');
 const connectDB = require('./config/db');
 
@@ -10,22 +10,21 @@ const postRoutes = require('./routes/post.routes');
 const commentRoutes = require('./routes/comment.routes');
 const adminRoutes = require('./routes/admin.routes');
 const messageRoutes = require('./routes/message.routes');
+
 const app = express();
 
 // Connect to MongoDB Atlas
 connectDB();
 
-// 2. Middleware (Updated CORS for Vite's port 5174)
-const cors = require('cors');
-
-// Update your existing cors setup to this:
+// 2. Middleware (Updated CORS to allow your live Vercel frontend)
 app.use(cors({
     origin: [
         'http://localhost:5174', // Keeps local testing working
-        'https://esports-analyst.vercel.app' // Your new live frontend!
+        'https://esports-analyst.vercel.app' // Your live frontend
     ],
     credentials: true
 }));
+
 app.use(express.json());
 
 // 3. Serve uploaded image files publicly
